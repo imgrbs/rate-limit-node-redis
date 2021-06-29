@@ -46,7 +46,7 @@ var updateLimitInBucket = async (ip) => {
 
     const jsonNewVersion = JSON.parse(newVersion)
 
-    console.info(`token=${newVersion} get on start process`)
+    console.info(`token=${newVersion} get on before save process`)
 
     if (jsonNewVersion.token === 0) {
         return jsonNewVersion
@@ -58,7 +58,7 @@ var updateLimitInBucket = async (ip) => {
 
     client.set(ip, jsonValue);
 
-    console.info(`ip=${ip} init=${jsonValue} set redis`)
+    console.info(`ip=${ip} newValue=${jsonValue} set redis`)
 
     return newValue
 }
