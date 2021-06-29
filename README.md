@@ -3,7 +3,11 @@
 This is a POC Version of rate limit system.
 - no unit tests
 - no refactor
-- uses postman collections for testing
+- uses ./ab for testing
+
+```
+./ab -n 20 -c 5 http://localhost:8080/hello/test
+```
 
 ## Design Technique
 - Uses Token Bucket Algorithm
@@ -12,7 +16,6 @@ This is a POC Version of rate limit system.
 
 ## System Requirements
 - node 12.16.1
-- load test application with concurrency feature (eg. postman, jmeter)
 
 
 ## Todo
